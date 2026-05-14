@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-[#C9A84C]/30 flex justify-between items-center px-6 md:px-8 h-14">
@@ -6,26 +8,26 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex gap-8">
-        <a
+        <NavLink
           className="text-[#C9A84C] border-b border-[#C9A84C] pb-1 font-serif tracking-widest uppercase text-xs"
-          href="#"
+          to="/"
         >
           Dashboard
-        </a>
+        </NavLink>
 
-        <a
+        <NavLink
           className="text-[#C9A84C]/60 font-serif tracking-widest uppercase text-xs hover:text-[#C9A84C]"
-          href="#"
+          to="/paper-trading"
         >
           Paper Trade
-        </a>
+        </NavLink>
 
-        <a
+        <NavLink
           className="text-[#C9A84C]/60 font-serif tracking-widest uppercase text-xs hover:text-[#C9A84C]"
-          href="#"
+          to="/analytics"
         >
           Analytics
-        </a>
+        </NavLink>
       </div>
 
       <button className="font-serif tracking-widest uppercase text-xs text-[#C9A84C] border border-[#C9A84C]/50 px-6 py-2 hover:bg-[#C9A84C] hover:text-neutral-950 transition-all">
