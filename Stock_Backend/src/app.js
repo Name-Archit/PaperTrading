@@ -12,7 +12,7 @@ const authRoutes =
   require("./routes/auth.routes");
 
 const tradeRoutes =
-  require("./routes/trade.routes");
+  require("./routes/trade.route");
 
 const portfolioRoutes =
   require("./routes/portfolio.routes");
