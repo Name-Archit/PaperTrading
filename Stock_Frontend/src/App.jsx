@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
 import HomePage from "./pages/HomePage"
-import PaperTrading from "./pages/PaperTrading"
+import PaperTrading from "./pages/paperTrading"
 
 function App() {
   return (
