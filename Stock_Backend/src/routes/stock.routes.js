@@ -1,13 +1,19 @@
-const express = require("express");
+const express =
+  require("express")
 
-const router = express.Router();
+const router =
+  express.Router()
 
 const stockController =
-  require("../controllers/stock.controller");
+  require(
+    "../controllers/stock.controller"
+  )
 
 router.get(
-  "/:symbol",
-  stockController.getPrice
-);
+  "/top-stocks",
 
-module.exports = router;
+  stockController.getTopStocks
+)
+
+module.exports =
+  router
