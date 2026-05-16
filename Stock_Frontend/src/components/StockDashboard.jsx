@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { boughtStocks } from "../data/stock"
 import StockCard from "./StockCard"
-import { useStocks } from "../context/StockContext"
+import { useStocks } from "../context/stockContext"
 
 const StockDashboard = () => {
 
