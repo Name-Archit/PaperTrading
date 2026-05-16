@@ -44,7 +44,7 @@ export const StockProvider = ({ children }) => {
 
         /*
         |--------------------------------------------------------------------------
-        | Set Global Market Status from First Stock
+        | Set Global Market Status from First Stock and Pass to All Cards
         |--------------------------------------------------------------------------
         */
 
