@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react"
 
-const StockContext = createContext()
+const stockContext = createContext()
 
 export const StockProvider = ({ children }) => {
 
@@ -86,7 +86,7 @@ export const StockProvider = ({ children }) => {
   }
 
   return (
-    <StockContext.Provider value={{
+    <stockContext.Provider value={{
       topStocks,
       loading,
       error,
@@ -95,8 +95,8 @@ export const StockProvider = ({ children }) => {
       clearStocks
     }}>
       {children}
-    </StockContext.Provider>
+    </stockContext.Provider>
   )
 }
 
-export const useStocks = () => useContext(StockContext)
+export const useStocks = () => useContext(stockContext)
