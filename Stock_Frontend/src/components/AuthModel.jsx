@@ -223,18 +223,18 @@ const AuthModel = ({
   if (!isOpen) return null
 
   return (
-
     <div
+      onClick={handleClose}
       className="
-        fixed inset-0 z-[100]
-        bg-black/70
-        backdrop-blur-md
-        flex items-center justify-center
-        px-4
-      "
+    fixed inset-0 z-100
+    bg-black/70
+    backdrop-blur-md
+    flex items-center justify-center
+    px-4
+  "
     >
-
       <div
+        onClick={(e) => e.stopPropagation()}
         className="
           w-full max-w-md
           bg-neutral-950
@@ -244,13 +244,10 @@ const AuthModel = ({
           relative
         "
       >
-
         {/* CLOSE BUTTON */}
 
         <button
-
           onClick={handleClose}
-
           className="
             absolute top-4 right-4
             text-[#C9A84C]/50
@@ -273,45 +270,21 @@ const AuthModel = ({
             mb-8
           "
         >
-
-          {
-            isLogin
-              ? "Access Terminal"
-              : "Create Account"
-          }
-
+          {isLogin ? "Access Terminal" : "Create Account"}
         </h2>
 
         {/* FORM */}
 
-        <form
-          autoComplete="off"
-
-          onSubmit={handleSubmit}
-
-          className="space-y-5"
-        >
-
+        <form autoComplete="off" onSubmit={handleSubmit} className="space-y-5">
           {/* USERNAME */}
 
           {!isLogin && (
-
             <input
-
               autoComplete="off"
-
               type="text"
-
               placeholder="Username"
-
               value={username}
-
-              onChange={(e) =>
-                setUsername(
-                  e.target.value
-                )
-              }
-
+              onChange={(e) => setUsername(e.target.value)}
               className="
                 w-full
                 bg-black
@@ -328,21 +301,11 @@ const AuthModel = ({
           {/* EMAIL */}
 
           <input
-
             autoComplete="off"
-
             type="email"
-
             placeholder="Email"
-
             value={email}
-
-            onChange={(e) =>
-              setEmail(
-                e.target.value
-              )
-            }
-
+            onChange={(e) => setEmail(e.target.value)}
             className="
               w-full
               bg-black
@@ -358,21 +321,11 @@ const AuthModel = ({
           {/* PASSWORD */}
 
           <input
-
             autoComplete="new-password"
-
             type="password"
-
             placeholder="Password"
-
             value={password}
-
-            onChange={(e) =>
-              setPassword(
-                e.target.value
-              )
-            }
-
+            onChange={(e) => setPassword(e.target.value)}
             className="
               w-full
               bg-black
@@ -388,13 +341,11 @@ const AuthModel = ({
           {/* MESSAGE */}
 
           {message && (
-
             <p
               className={`
                 text-sm
                 ${
-                  message.includes("success")
-                    || message.includes("Granted")
+                  message.includes("success") || message.includes("Granted")
                     ? "text-green-400"
                     : "text-red-400"
                 }
@@ -407,9 +358,7 @@ const AuthModel = ({
           {/* SUBMIT BUTTON */}
 
           <button
-
             type="submit"
-
             className="
               w-full
               bg-[#C9A84C]
@@ -422,15 +371,8 @@ const AuthModel = ({
               transition-all
             "
           >
-
-            {
-              isLogin
-                ? "Sign In"
-                : "Create Account"
-            }
-
+            {isLogin ? "Sign In" : "Create Account"}
           </button>
-
         </form>
 
         {/* TOGGLE */}
@@ -443,38 +385,22 @@ const AuthModel = ({
             text-[#C9A84C]/60
           "
         >
-
-          {
-            isLogin
-              ? "No account?"
-              : "Already registered?"
-          }
+          {isLogin ? "No account?" : "Already registered?"}
 
           <button
-
             onClick={handleToggle}
-
             className="
               ml-2
               text-[#C9A84C]
               hover:underline
             "
           >
-
-            {
-              isLogin
-                ? "Sign Up"
-                : "Sign In"
-            }
-
+            {isLogin ? "Sign Up" : "Sign In"}
           </button>
-
         </div>
-
       </div>
-
     </div>
-  )
+  );
 }
 
 export default AuthModel
