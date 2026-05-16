@@ -85,7 +85,7 @@ const StockDashboard = () => {
 
       </div>
 
-      {/* MARKET STATUS BANNER */}
+      {/* MARKET STATUS BANNER and */}
 
       {activeTab === "top" && !loading && marketStatus === "Closed" && (
         <div className="mb-8 border border-red-500/30 bg-red-500/5 px-6 py-3 flex items-center gap-3">
