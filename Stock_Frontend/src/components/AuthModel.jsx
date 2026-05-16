@@ -198,11 +198,11 @@ const AuthModel = ({
           "Access Granted"
         )
 
-        setTimeout(() => {
+       setTimeout(() => {
+         handleClose();
 
-          handleClose()
-
-        }, 1000)
+         window.location.reload();
+       }, 1000);
 
       } catch (err) {
 

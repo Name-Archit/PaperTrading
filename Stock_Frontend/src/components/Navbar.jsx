@@ -101,20 +101,23 @@ const Navbar = () => {
   |--------------------------------------------------------------------------
   */
 
-  const handleLogout = () => {
+const handleLogout = () => {
+  localStorage.removeItem("token");
 
-    localStorage.removeItem(
-      "token"
-    )
+  localStorage.removeItem("user");
 
-    localStorage.removeItem(
-      "user"
-    )
+  setUser(null);
 
-    setUser(null)
+  setShowDropdown(false);
 
-    setShowDropdown(false)
-  }
+  /*
+  |--------------------------------------------------------------------------
+  | Refresh Entire App
+  |--------------------------------------------------------------------------
+  */
+
+  window.location.reload();
+}
 
   return (
 

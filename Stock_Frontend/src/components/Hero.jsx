@@ -9,11 +9,17 @@ const Hero = () => {
         Investment Banking | Wealth Management | Trading | Financial Advisory
       </p>
 
-      <button className="premium-border sharp-border px-10 py-4 uppercase tracking-widest text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black transition-all duration-500">
-        Start Learning
-      </button>
+      <div className="flex flex-row gap-6">
+        <button className="cursor-pointer premium border sharp-border px-10 py-4 uppercase tracking-widest text-black bg-[#C9A84C]">
+          Start Trading
+        </button>
+
+        <button className="cursor-pointer sharp-border border-2 border-[#C9A84C] px-10 py-4 uppercase tracking-widest text-[#C9A84C] hover:bg-[#C9A84C] hover:text-black transition-all duration-500">
+          Docs.
+        </button>
+      </div>
     </section>
-  )
+  );
 }
 
 export default Hero 
