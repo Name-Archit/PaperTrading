@@ -212,7 +212,7 @@ exports.getTopStocks = async (req, res) => {
     cache.data = results
     cache.lastFetched = Date.now()
 
-    console.log("Fresh data fetched and cached")
+    console.log("Completely Fresh data fetched and cached")
 
     res.json({
       success: true,
